@@ -17,7 +17,7 @@
     "lodash": "^4.17.21",
     "marked": "^1.2.8",
     "moment": "^2.10.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
     "postcss-smart-import": "^0.7.6",
     "vue": "^2.6.12",
