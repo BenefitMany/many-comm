@@ -47,7 +47,7 @@ gem 'twilio-ruby', '5.46.1'
 gem 'typhoeus'
 gem 'uglifier', '>= 1.3.0'
 gem 'virtus'
-gem 'webpacker', '~> 3.0'
+gem 'webpacker', '~> 5.2'
 gem 'whenever', require: false
 
 # Environment Specific configuration
