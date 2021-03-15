@@ -1,0 +1,33 @@
+.appWrapper {
+  display: flex;
+}
+
+.mcContainer {
+  padding: 0 30px;
+}
+
+.routerViewContainer {
+  min-height: 100vh;
+  padding: 0 30px;
+  width: calc(100vw - 275px);
+  position: absolute;
+  right: 0;
+}
+
+.stickyContainer {
+  display: flex;
+  margin-left: auto;
+  width: calc(100vw - 275px);
+  height: 100vh;
+  max-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.scrollContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  margin-bottom: auto;
+}

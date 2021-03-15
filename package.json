@@ -1,0 +1,78 @@
+{
+  "name": "many-comm",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.2.1",
+    "axios": "^0.21.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "bootstrap": "^4.0.0",
+    "bootstrap-datepicker": "^1.8.0",
+    "chart.js": "^2.8.0",
+    "file-saver": "^2.0.2",
+    "jquery": "^3.5.0",
+    "lodash": "^4.17.21",
+    "marked": "^1.2.8",
+    "moment": "^2.10.2",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
+    "postcss-smart-import": "^0.7.6",
+    "vue": "^2.6.12",
+    "vue-chartjs": "^3.4.2",
+    "vue-loader": "^15.0.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.6.12",
+    "vuelidate": "^0.6.1",
+    "vuex": "^3.1.2",
+    "vuex-persistedstate": "^2.5.1",
+    "webpack-bundle-analyzer": "^2.11.1"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.13",
+    "babel-jest": "^22.4.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.0",
+    "jest": "^22.4.3",
+    "moment-locales-webpack-plugin": "^1.0.5",
+    "vue-jest": "^2.4.0",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.11.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "c3": "<rootDir>/_mocks_/c3.js",
+      "datepicker": "<rootDir>/_mocks_/datepicker.js",
+      "^@[/](.+)": "<rootDir>/src/$1",
+      "^@components[/](.+)": "<rootDir>/app/javascript/packs/components/$1",
+      "^@marketing[/](.+)": "<rootDir>/app/javascript/packs/components/_marketing/$1",
+      "^@shared[/](.+)": "<rootDir>/app/javascript/packs/components/shared/$1",
+      "^@utilities[/](.+)": "<rootDir>/app/javascript/packs/utilities/$1",
+      "^@styles[/](.+)": "<rootDir>/app/javascript/packs/styles/$1",
+      "^@submodules[/](.+)": "<rootDir>/app/javascript/packs/submodules/$1",
+      "^@node_modules[/](.+)": "<rootDir>/node_modules/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/_mocks_/localStorageMock.js"
+    ]
+  },
+  "scripts": {
+    "jest": "jest spec/javascript/packs/components",
+    "test": "jest spec/javascript/packs/components --coverage",
+    "fix": "./node_modules/.bin/eslint --ext js,vue app/javascript --fix",
+    "production": "yarn install && NODE_ENV=test RAILS_ENV=test bundle exec rails webpacker:compile && NODE_ENV=test RAILS_ENV=test rails s",
+    "lint": "./node_modules/.bin/eslint --ext js,vue app/javascript",
+    "watch": "./bin/webpack-dev-server"
+  }
+}

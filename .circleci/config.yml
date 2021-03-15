@@ -1,0 +1,74 @@
+# Ruby CircleCI 2.0 configuration file
+# EXAMPLE::: https://github.com/CircleCI-Public/circleci-demo-ruby-rails/blob/master/.circleci/config.yml
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+machine:
+  timezone:
+    America/Los_Angeles
+
+jobs:
+  build:
+    docker:
+      # specify the version you desirehere
+      - image: circleci/ruby:2.6.4-node
+        environment:
+          RAILS_ENV: test
+          # BUNDLER_VERSION: 2.0.1
+      - image: circleci/postgres:11
+        # environment:
+        #   POSTGRES_USER: postgres
+        #   POSTGRES_DB: manycomm_test
+      - image: node:10.15.3
+
+    working_directory: ~/repo
+
+    steps:
+      - run:
+          name: "Setup custom environment variables"
+          command: |
+            echo 'export PGUSER="postgres"' >> $BASH_ENV
+            echo 'export PGPASSWORD=""' >> $BASH_ENV
+
+      - checkout
+      - run: sudo apt install -y postgresql-client || true
+      - run: gem install bundler --version 2.0.1
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+            yarn
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+      # Database setup
+      - run: mv config/database.ci.yml config/database.yml
+      # - run: bin/rails db:environment:set
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:schema:load
+
+      # run tests!
+      - run: yarn lint
+      # - run: yarn test
+      - run: mkdir ~/test-results
+      - run:
+          command: bundle exec rspec --format progress --format RspecJunitFormatter -o ~/test-results/rspec.xml
+
+
+      # collect reports
+      - store_test_results:
+          path: ~/test-results
+      - store_artifacts:
+          path: ~/test-results
+          destination: test-results

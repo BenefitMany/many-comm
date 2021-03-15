@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  database: manycomm_development
+  encoding: UTF8
+  username: <%= ENV['PGUSER'] || 'manycomm' %>
+  password: <%= ENV['PGPASSWORD'] || 'manycomm' %>
+  port: 5432
+  host: localhost
+  min_messages: warning
+  pool: <%= ENV['DATABASE_POOL'] || 5 %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: manycomm_test
+
+# production:
+#   <<: *default
+#   pool:  <%= ENV['DATABASE_POOL'] || 5 %>
+#   database: benefitmany_production
+#   username: <%= ENV['DATABASE_USERNAME'] %>
+#   password: <%= ENV['DATABASE_PASSWORD'] %>

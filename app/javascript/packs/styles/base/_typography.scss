@@ -1,0 +1,46 @@
+@import url("https://use.typekit.net/fbm4vfj.css");
+@import '../abstracts/variables';
+
+* {
+  font-family: calibri, sans-serif;
+}
+
+body {
+  color: #1C2022;;
+}
+
+.--italic {
+  font-style: italic;
+}
+.--bold {
+  font-weight: $bold;
+}
+.--light {
+  font-weight: $light;
+}
+
+.--dark {
+  color: $dark;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: $bold;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-weight: $bold;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  margin-bottom: 6px;
+}

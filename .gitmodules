@@ -1,0 +1,3 @@
+[submodule "app/javascript/packs/submodules"]
+	path = app/javascript/packs/submodules
+	url = git@github.com:BenefitMany/vue_submodule.git

@@ -1,0 +1,48 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+/.tmp
+.idea/*
+coverage/*
+*.swp
+/daily_store/*
+/notes/products.sql
+config/database.yml
+config/local_env.yml
+.env
+.foreman
+.rvmrc
+.ruby-version
+.ruby-gemset
+.DS_Store
+*.iml
+
+/notes/**/~*
+/public/packs
+/public/packs-test
+/public/uploads/**/*
+/uploads/**/*
+/node_modules
+/doc/api/*
+/.vscode/*
+/.nyc_output
+/.vscode/*
+/yarn-error.log
+
+# Ignore master key for decrypting credentials and more.
+# /config/master.key
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key

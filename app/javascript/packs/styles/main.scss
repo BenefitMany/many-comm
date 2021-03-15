@@ -1,0 +1,55 @@
+@import 'abstracts/abstracts';
+@import 'base/base';
+@import 'layout/layout';
+@import 'components/components';
+
+// @import 'abstracts/functions';
+// @import 'abstracts/mixins';
+// @import 'abstracts/variables';
+//
+// @import 'base/reset';
+// @import 'base/typography';
+//
+// @import 'layout/grid';
+// @import 'layout/header';
+// @import 'layout/sidebar';
+//
+// @import 'components/buttons';
+// @import 'components/forms';
+
+.login-padding-top {
+  padding-top: 10rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.highlighter-red {
+  border: 2px solid red !important;
+}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.--green {
+  background-color: $green;
+}
+.--yellow {
+  background-color: $yellow;
+}
+.--red {
+  background-color: $red;
+}
+.--gray {
+  background-color: $gray;
+}

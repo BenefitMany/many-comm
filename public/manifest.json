@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "ManyComm",
+  "short_name": "ManyComm",
+  "description": "ManyComm is web-app for text",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#60699D",
+  "theme_color": "#60699E"
+}

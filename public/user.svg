@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>User Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ManyComm-/-OP-Home-Copy-4" transform="translate(-305.000000, -107.000000)">
+            <g id="Message-1" transform="translate(305.000000, 107.000000)">
+                <g id="User-Icon">
+                    <circle id="Oval" fill="#FF6A21" cx="20.5" cy="20.5" r="20.5"></circle>
+                    <path d="M28,25.8945312 C28,27.6054688 26.875,29 25.5039062,29 L15.4960938,29 C14.125,29 13,27.6054688 13,25.8945312 C13,22.8125 13.7617188,19.25 16.8320312,19.25 C17.78125,20.1757812 19.0703125,20.75 20.5,20.75 C21.9296875,20.75 23.21875,20.1757812 24.1679688,19.25 C27.2382812,19.25 28,22.8125 28,25.8945312 Z M25,15.5 C25,17.984375 22.984375,20 20.5,20 C18.015625,20 16,17.984375 16,15.5 C16,13.015625 18.015625,11 20.5,11 C22.984375,11 25,13.015625 25,15.5 Z" id="" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

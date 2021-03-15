@@ -1,0 +1,268 @@
+AllCops:
+  Exclude:
+    - 'spec/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'script/**/*'
+    - 'lib/mina/**/*'
+    - 'lib/tasks/**/*'
+    - 'config/**/*'
+    - 'Guardfile'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'node_modules/**/*'
+    - 'notes/**/*'
+    - 'scripts/**/*'
+  TargetRubyVersion: 2.7.1
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 35
+Metrics/MethodLength:
+  Max: 100
+Metrics/ClassLength:
+  Max: 250
+Metrics/ModuleLength:
+  Max: 250
+Metrics/PerceivedComplexity:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Layout/ArrayAlignment:
+  Enabled: true
+Layout/ClassStructure:
+   ExpectedOrder:
+     - module_inclusion
+     - constants
+     - association
+     - public_attribute_macros
+     - public_delegate
+     - macros
+     - public_class_methods
+     - initializer
+     - public_methods
+     - protected_attribute_macros
+     - protected_methods
+     - private_attribute_macros
+     - private_delegate
+     - private_methods
+   Categories:
+     association:
+       - has_many
+       - has_one
+     attribute_macros:
+       - attr_accessor
+       - attr_reader
+       - attr_writer
+     macros:
+       - validates
+       - validate
+     module_inclusion:
+       - include
+       - prepend
+       - extend
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/LineLength:
+  Max: 120
+Layout/MultilineArrayLineBreaks:
+  Enabled: true
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+  # EnforcedStyle: snake_case
+Style/AutoResourceCleanup:
+  Enabled: true
+Style/FormatStringToken:
+  Enabled: false
+Style/DateTime:
+  Enabled: true
+Style/IpAddresses:
+  Enabled: true
+Style/ReturnNil:
+  Enabled: true
+Style/StringMethods:
+  Enabled: true
+Style/Send:
+  Enabled: true
+Style/StringHashKeys:
+  Enabled: true
+Style/ImplicitRuntimeError:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
+# Style/MethodCallWithArgsParentheses:
+#   Enabled: false
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Style/RedundantFetchBlock:
+  Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
+
+
+Lint/BinaryOperatorWithIdenticalOperands: # (new in 0.89)
+  Enabled: true
+Lint/DuplicateElsifCondition: # (new in 0.88)
+  Enabled: true
+Lint/DuplicateRequire: # (new in 0.90)
+  Enabled: true
+Lint/DuplicateRescueException: # (new in 0.89)
+  Enabled: true
+Lint/EmptyConditionalBody: # (new in 0.89)
+  Enabled: true
+Lint/EmptyFile: # (new in 0.90)
+  Enabled: true
+Lint/FloatComparison: # (new in 0.89)
+  Enabled: true
+Lint/MissingSuper: # (new in 0.89)
+  Enabled: true
+Lint/OutOfRangeRegexpRef: # (new in 0.89)
+  Enabled: true
+Lint/SelfAssignment: # (new in 0.89)
+  Enabled: true
+Lint/TopLevelReturnWithArgument: # (new in 0.89)
+  Enabled: true
+Lint/TrailingCommaInAttributeDeclaration: # (new in 0.90)
+  Enabled: true
+Lint/UnreachableLoop: # (new in 0.89)
+  Enabled: true
+Lint/UselessMethodDefinition: # (new in 0.90)
+  Enabled: true
+Style/AccessorGrouping: # (new in 0.87)
+  Enabled: true
+Style/ArrayCoercion: # (new in 0.88)
+  Enabled: true
+Style/BisectedAttrAccessor: # (new in 0.87)
+  Enabled: true
+Style/CaseLikeIf: # (new in 0.88)
+  Enabled: true
+Style/CombinableLoops: # (new in 0.90)
+  Enabled: true
+Style/ExplicitBlockArgument: # (new in 0.89)
+  Enabled: true
+Style/GlobalStdStream: # (new in 0.89)
+  Enabled: true
+Style/HashAsLastArrayItem: # (new in 0.88)
+  Enabled: true
+Style/HashLikeCase: # (new in 0.88)
+  Enabled: true
+Style/KeywordParametersOrder: # (new in 0.90)
+  Enabled: true
+Style/OptionalBooleanParameter: # (new in 0.89)
+  Enabled: false
+Style/RedundantAssignment: # (new in 0.87)
+  Enabled: true
+Style/RedundantFileExtensionInRequire: # (new in 0.88)
+  Enabled: true
+Style/RedundantSelfAssignment: # (new in 0.90)
+  Enabled: true
+Style/SingleArgumentDig: # (new in 0.89)
+  Enabled: true
+Style/SoleNestedConditional: # (new in 0.89)
+  Enabled: true
+Style/StringConcatenation: # (new in 0.89)
+  Enabled: true
+
+Layout/BeginEndAlignment: # (new in 0.91)
+  Enabled: true
+Lint/ConstantDefinitionInBlock: # (new in 0.91)
+  Enabled: true
+Lint/IdentityComparison: # (new in 0.91)
+  Enabled: true
+Lint/UselessTimes: # (new in 0.91)
+  Enabled: true
+
+Lint/DuplicateRegexpCharacterClassElement: # (new in 1.1)
+  Enabled: true
+Lint/EmptyBlock: # (new in 1.1)
+  Enabled: true
+Lint/ToEnumArguments: # (new in 1.1)
+  Enabled: true
+Lint/UnmodifiedReduceAccumulator: # (new in 1.1)
+  Enabled: true
+Style/ArgumentsForwarding: # (new in 1.1)
+  Enabled: true
+Style/DocumentDynamicEvalDefinition: # (new in 1.1)
+  Enabled: true
+Style/SwapValues: # (new in 1.1)
+  Enabled: true
+
+Lint/DuplicateBranch: # (new in 1.3)
+  Enabled: true
+Lint/EmptyClass: # (new in 1.3)
+  Enabled: true
+Lint/NoReturnInBeginEndBlocks: # (new in 1.2)
+  Enabled: true
+Style/CollectionCompact: # (new in 1.2)
+  Enabled: true
+Style/NegatedIfElseCondition: # (new in 1.2)
+  Enabled: true
+Style/NilLambda: # (new in 1.3)
+  Enabled: true
+Style/RedundantArgument: # (new in 1.4)
+  Enabled: true
+
+Layout/SpaceBeforeBrackets: # (new in 1.7)
+  Enabled: true
+Lint/AmbiguousAssignment: # (new in 1.7)
+  Enabled: true
+Lint/UnexpectedBlockArity: # (new in 1.5)
+  Enabled: true
+Style/HashExcept: # (new in 1.7)
+  Enabled: true
+
+Gemspec/DateAssignment: # (new in 1.10)
+  Enabled: true
+Lint/DeprecatedConstants: # (new in 1.8)
+  Enabled: true
+Lint/LambdaWithoutLiteralBlock: # (new in 1.8)
+  Enabled: true
+Lint/NumberedParameterAssignment: # (new in 1.9)
+  Enabled: true
+Lint/OrAssignmentToConstant: # (new in 1.9)
+  Enabled: true
+Lint/RedundantDirGlobSort: # (new in 1.8)
+  Enabled: true
+Lint/SymbolConversion: # (new in 1.9)
+  Enabled: true
+Lint/TripleQuotes: # (new in 1.9)
+  Enabled: true
+Style/EndlessMethod: # (new in 1.8)
+  Enabled: true
+Style/HashConversion: # (new in 1.10)
+  Enabled: true
+Style/IfWithBooleanLiteralBranches: # (new in 1.9)
+  Enabled: true

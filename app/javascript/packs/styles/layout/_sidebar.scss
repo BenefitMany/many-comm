@@ -1,0 +1,19 @@
+@import '../abstracts/variables';
+
+.sidebar {
+  min-width: 275px;
+  height: 100vh;
+  background-color: $dkBlue;
+  padding: 30px;
+  color: $white;
+  font-weight: lighter;
+  position: fixed;
+}
+
+.operatorsList, .conversationsList {
+  margin-top: 40px;
+}
+
+.availability {
+  margin-top: 25px;
+}

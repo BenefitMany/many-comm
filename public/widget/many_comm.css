@@ -1,0 +1,232 @@
+html, body {
+  --primary-color: #009DDC;
+  --primary-color-text: #fff;
+  --secondary-color: #5865C3;
+  --secondary-color-text: #fff;
+  background: #efefef;
+  height:100%;
+}
+
+.many-comm-hidden { display: none !important; }
+
+#many-comm-center-text {
+  display: flex;
+  flex: 1;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+
+}
+#many-comm-circle {
+  z-index: 1000000;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: var(--primary-color);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: var(--primary-color-text);
+  padding: 28px;
+  cursor: pointer;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn#my-btn {
+  background: var(--primary-color-text);
+  padding-top: 13px;
+  padding-bottom: 12px;
+  border-radius: 45px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: var(--secondary-color);
+}
+#many-comm-overlay {
+  background: rgba(255,255,255,0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: none;
+}
+
+#many-comm-box {
+  z-index: 1000000;
+  background: #efefef;
+  position:fixed;
+  right:30px;
+  bottom:50px;
+  width:350px;
+  max-width: 85vw;
+  max-height:100vh;
+  border-radius:5px;
+  box-shadow: 0px 5px 35px 9px #ccc;
+}
+
+#many-comm-box-toggle {
+  float:right;
+  margin-right:15px;
+  cursor:pointer;
+}
+.many-comm-box-header {
+  background: var(--primary-color);
+  height:70px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  color: var(--primary-color-text);
+  text-align:center;
+  font-size:20px;
+  padding-top:17px;
+}
+.many-comm-box-body {
+  position: relative;
+  height:370px;
+  height:auto;
+  border:1px solid #ccc;
+  overflow: hidden;
+}
+
+#many-comm-input {
+  background: var(--primary-color-text);
+  width:100%;
+  position:relative;
+  height:47px;
+  padding-top:10px;
+  padding-right:50px;
+  padding-bottom:10px;
+  padding-left:15px;
+  border:none;
+  resize:none;
+  outline:none;
+  border:1px solid #ccc;
+  color: var(--primary-color);
+  border-top:none;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  overflow:hidden;
+  margin-bottom: 0px;
+  box-sizing: inherit;
+}
+.many-com-input > form {
+  margin-bottom: 0;
+}
+#many-comm-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+#many-comm-input::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+#many-comm-input:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+#many-comm-input:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+.many-comm-submit {
+  position:absolute;
+  bottom:3px;
+  right:10px;
+  background: transparent;
+  box-shadow:none;
+  border:none;
+  border-radius:50%;
+  color: var(--primary-color);
+  width:35px;
+  height:35px;
+}
+#many-comm-logs {
+  padding:15px;
+  height:370px;
+  overflow-y:scroll;
+}
+
+#many-comm-logs::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#many-comm-logs::-webkit-scrollbar {
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#many-comm-logs::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 500px) {
+  #many-comm-logs {
+    height:40vh;
+  }
+}
+
+.many-comm-msg-button>ul>li {
+  list-style:none;
+  float:left;
+  width:50%;
+}
+.many-comm-msg-button {
+  clear: both;
+  margin-bottom: 70px;
+}
+
+/* MESSAGES STYLING */
+
+.many-comm-msg {
+  clear:both;
+}
+
+.many-comm-msg.visitor > .many-comm-msg-text {
+  float:right;
+  margin-right:10px;
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+.many-comm-msg.visitor > .many-comm-msg-signature {
+  float:right;
+  margin-right:10px;
+}
+
+.many-comm-msg.user > .many-comm-msg-text {
+  float:left;
+  margin-right:10px;
+  color: var(--primary-color);
+  background: var(--primary-color-text);
+}
+
+.many-comm-msg.user > .many-comm-msg-signature {
+  float:left;
+  margin-right:10px;
+}
+
+.many-comm-msg-signature {
+  color: #ddd;
+}
+
+.many-comm-msg-text {
+  background: var(--primary-color-text);
+  padding: 10px 15px 10px 15px;
+  color: var(--primary-color);
+  max-width: 75%;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.many-comm-msg-signature {
+  color: var(--primary-color-text);
+  max-width: 75%;
+  float: left;
+  margin-left: 10px;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+
+/* END MESSAGE STYLING */

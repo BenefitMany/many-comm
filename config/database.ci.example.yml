@@ -1,0 +1,6 @@
+test:
+  adapter: postgresql
+  database: manycomm_test
+  encoding: unicode
+  host: localhost
+  user: postgres
