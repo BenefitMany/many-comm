@@ -85,7 +85,7 @@ group :test do
   gem 'mock_redis'
   gem 'response_code_matchers'
   gem 'rspec-activejob'
-  gem 'resque_spec', '~> 0.17.0'
+  gem 'resque_spec', '~> 0.18.1'
   gem 'shoulda-matchers', require: false
   gem 'simplecov', require: false
   gem 'stripe-ruby-mock', '~> 2.5.4', require: 'stripe_mock'
