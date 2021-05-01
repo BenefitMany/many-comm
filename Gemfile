@@ -21,7 +21,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'postgresql'
 gem 'rails', '~> 5.2.1'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 gem 'kaminari', '1.2.1' # Usint will_paginate
 gem 'foreman', '~> 0.84.0'
 gem 'mina', '1.0.6'
